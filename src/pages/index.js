@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Link} from 'gatsby';
 import {StaticImage} from 'gatsby-plugin-image';
+import axios from 'axios';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -10,6 +11,7 @@ import useFirebase from '../hooks/useFirebase';
 const IndexPage = () => {
   const firebase = useFirebase();
   const [data, setData] = React.useState('Loading...');
+  const [newData, setNewData] = React.useState('Loading......');
 
   React.useEffect(() => {
     if (firebase) {
@@ -20,6 +22,11 @@ const IndexPage = () => {
           .doc('trialDoc')
           .get();
 
+        const {data: axiosData} = await axios.get(
+          'https://hacktoberfest.dscnitrourkela.org/',
+        );
+
+        setNewData(axiosData);
         setData(firestoreData.data().message);
       };
 
@@ -33,6 +40,7 @@ const IndexPage = () => {
       <h1>Hi people</h1>
       <p>Welcome to your new Gatsby site.</p>
       <p>{data}</p>
+      <p>{newData}</p>
       <StaticImage
         src="../images/gatsby-astronaut.png"
         width={300}
