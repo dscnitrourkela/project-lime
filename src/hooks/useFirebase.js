@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react"
+
+// Utils
 import getFirebase from "../utils/firebase"
 
 export default function useFirebase() {
