@@ -1,5 +1,5 @@
 {
-  "parser": "@babel/eslint-parser",
+  // "parser": "@babel/eslint-parser",
   "parserOptions": {
     "sourceType": "module",
     "allowImportExportEverywhere": false,
@@ -20,6 +20,8 @@
     "no-use-before-define": 0,
     "click-events-have-key-events": 0,
     "no-static-element-interactions": 0,
-    "prefer-destructuring": 1
+    "prefer-destructuring": 1,
+    "import/no-named-as-default-member": 0,
+    "import/no-named-as-default": 0
   }
 }
