@@ -1,7 +1,7 @@
 [![Starware](https://img.shields.io/badge/⭐-Starware-f5a91a?labelColor=black)](https://github.com/zepfietje/starware)
 
 ### project-lime
-## The official website of Diamond Jubilee, NIT Rourkela <br>
+## The official repository for development of **Diamond Jubilee, NIT Rourkela** Website <br>
 Project developed and maintained by [DSC NIT Rourkela](https://dscnitrourkela.org/)
 ![DSC NIT Rourkela Cover Image](./RepoCover.png)
 
